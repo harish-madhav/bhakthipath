@@ -1,11 +1,11 @@
-
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const app = express();
+
 const allowedOrigins = [
     'http://localhost:3000',
-    'https://bhakthipath.netlify.app',
+    'https://bhakthipath.netlify.app',  // ✅ correct frontend domain
 ];
 
 const corsOptions = {
@@ -14,8 +14,9 @@ const corsOptions = {
         if (allowedOrigins.includes(origin)) return callback(null, true);
         return callback(new Error('Not allowed by CORS'));
     },
-    methods: ['GET', 'POST', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'X-User-Email'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-User-Email'],
+    credentials: true
 };
 
 app.use(cors(corsOptions));
