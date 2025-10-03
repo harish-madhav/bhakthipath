@@ -1,0 +1,91 @@
+.App {
+  min-height: 100vh;
+}
+
+/* Custom styles for BhaktiPath */
+.hover-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Sanskrit text styling */
+.sanskrit-text {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Custom button styles */
+.btn-custom {
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-weight: 500;
+}
+
+/* Card hover effects */
+.card {
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Navigation styles */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Profile page styles */
+.profile-card {
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Removed audio player styles */
+
+/* Loading spinner */
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Text utilities */
+.text-sanskrit {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .display-1 {
+    font-size: 3rem;
+  }
+  
+  .display-4 {
+    font-size: 2rem;
+  }
+}
